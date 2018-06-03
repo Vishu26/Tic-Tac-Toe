@@ -1,0 +1,38 @@
+td{
+	height: 100px;
+	width: 100px;
+	background-color: #b6b5ca;
+	border-radius: 20px;
+}
+
+.te{
+	background-color:#3d4250;
+	text-align: center;
+	font-size:40px;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 400;
+
+}
+
+.tab{
+	margin-left: 35%;
+	background-color: #8B0000;
+	color: white;
+
+}
+
+.click1{
+	background-color: #dc685a;
+	font-size:40px;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 400;
+	text-align: center;
+}
+
+.click2{
+	background-color: #ecaf4f;
+	font-size:40px;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 400;
+	text-align: center;
+}
