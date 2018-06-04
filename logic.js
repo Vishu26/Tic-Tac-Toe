@@ -5,20 +5,28 @@ var tab = {'one':1, 'two':2, 'three':3, 'four':4, 'five':5, 'six':6, 'seven':7, 
 
 function check(a){
 
-	let e=false, f=false
+	var c=false, d=false, e=false, f=false
 
 	if (a%3==1){
 
-		var c = (board[1] && board[4] && board[7]) && (board[1]==board[4]) && (board[1]==board[7])
-		var d = (board[1] && board[2] && board[3]) && (board[1]==board[2]) && (board[1]==board[3])
+		c = (board[1] && board[4] && board[7]) && ((board[1]==board[4]) && (board[1]==board[7]))
 	}
 	else if (a%3==2){
-		var c = (board[2] && board[5] && board[8]) && (board[2]==board[5]) && (board[2]==board[8])
-		var d = (board[2] && board[3] && board[4]) && (board[2]==board[3]) && (board[3]==board[4])
+		c = (board[2] && board[5] && board[8]) && (board[2]==board[5]) && (board[2]==board[8])
 	}
 	else if (a%3==0){
-		var c = (board[3] && board[6] && board[9]) && (board[3]==board[6]) && (board[3]==board[9])
-		var d = (board[7] && board[8] && board[9]) && (board[7]==board[8]) && (board[7]==board[9])
+		c = (board[3] && board[6] && board[9]) && (board[3]==board[6]) && (board[3]==board[9])
+	}
+
+	if (a/3<=1){
+
+		d = (board[1] && board[2] && board[3]) && ((board[1]==board[2]) && (board[1]==board[3]))
+	}
+	else if (a/3<=2){
+		d = (board[4] && board[5] && board[6]) && (board[4]==board[5]) && (board[4]==board[6])
+	}
+	else{
+		d = (board[7] && board[8] && board[9]) && (board[7]==board[8]) && (board[7]==board[9])
 	}
 
 	if (a%4==1){
@@ -28,8 +36,6 @@ function check(a){
 	if (a%2==1){
 		f = (board[3] && board[5] && board[7]) && (board[3]==board[5]) && (board[3]==board[7])
 	}
-
-	console.log(d)
 
 	if (c||d||e||f){
 		alert('Game Won by player '+String(player==1?2:1))
